@@ -1,4 +1,4 @@
-! Programa de Simulación Monte Carlo elaborada por Ángel Chacín Ávila, bajo GNU Fortran y con licencia GPL
+! Programa de Simulación Monte Carlo elaborado por Ángel Chacín Ávila, bajo GNU Fortran y con licencia GPL
 PROGRAM simulacion_kmc_pulverizacion
       IMPLICIT NONE
       ! Definición de parámetros constantes
