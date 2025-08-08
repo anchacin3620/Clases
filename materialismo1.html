@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Materialismo Dialéctico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #1a1a1a;
+        }
+        .contenido {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .pie {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¿Qué es el Materialismo Dialéctico?</h1>
+
+    <div class="contenido" id="info"></div>
+
+    <div class="pie" id="autor"></div>
+
+    <script>
+        // Contenido principal
+        const contenido = `
+            <p>El <strong>materialismo dialéctico</strong> es una corriente filosófica desarrollada por Marx y Engels que sostiene que la materia es la base fundamental de toda la realidad; utiliza la dialéctica para explicar cómo el mundo está en constante cambio e interacción, oponiéndose al idealismo que prioriza la conciencia o el espíritu.</p>
+
+            <p>En esta visión, la realidad no es estática ni aislada: los fenómenos materiales están conectados y se desarrollan mediante procesos de transformación y contradicción, siguiendo ciertas leyes dialécticas inspiradas en Hegel, pero aplicadas a la naturaleza y la sociedad desde una base material, no idealista. Marx y Engels “pusieron la dialéctica hegeliana de cabeza”, estableciendo que lo primero es la materia y que la conciencia surge de ella, no al revés.</p>
+
+            <h3>Principales características:</h3>
+            <ul>
+                <li>La <strong>materia</strong> es “el sustrato de toda realidad, sea concreta o abstracta” (incluidos pensamientos y conciencia).</li>
+                <li>La realidad se concibe como un <strong>proceso dinámico</strong>, regido por leyes de transformación y cambio (no fijo ni terminado).</li>
+                <li>Se opone tanto al <strong>idealismo filosófico</strong> (que considera al espíritu como principio) como al <strong>materialismo mecanicista</strong> (que ve la materia de forma rígida y sin matices).</li>
+                <li>Declara la <strong>cognoscibilidad del mundo</strong>: podemos conocer la realidad porque existe objetivamente, independientemente de la mente o la percepción.</li>
+            </ul>
+
+            <p>El materialismo dialéctico es la base filosófica del marxismo-leninismo y fue la filosofía oficial de la antigua Unión Soviética.</p>
+        `;
+
+        // Pie de página con datos del autor
+        const autor = "Elaborado por el Profesor Ángel Chacín Ávila, Licenciado en Física, Especialista en Ciencias Computacionales, UNES Núcleo Zulia. © 2025";
+
+        // Asignar contenido a elementos
+        document.getElementById("info").innerHTML = contenido;
+        document.getElementById("autor").textContent = autor;
+    </script>
+
+</body>
+</html>
