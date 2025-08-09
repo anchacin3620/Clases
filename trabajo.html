@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorías de Trabajo y Energía</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        header {
+            background: #0275d8;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #0275d8;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .formula {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .interactive-section {
+            background: #e9f5ff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .input-group input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: inline-block;
+            background: #28a745;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button:hover {
+            background: #218838;
+        }
+        #resultado {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #d9534f;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Teorías Básicas de Trabajo y Energía</h1>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>¿Qué es el Trabajo?</h2>
+            <p>
+                En física, el **trabajo** ($W$) es la transferencia de energía a un objeto a través de la aplicación de una fuerza ($F$) a lo largo de una distancia ($d$). Solo se realiza trabajo cuando la fuerza tiene una componente en la dirección del movimiento.
+            </p>
+            <p>
+                La fórmula para calcular el trabajo es:
+            </p>
+            <div class="formula">
+                $W = F \cdot d$
+            </div>
+            <p>
+                Donde $W$ es el trabajo (medido en Joules, J), $F$ es la fuerza (medida en Newtons, N) y $d$ es la distancia (medida en metros, m).
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>¿Qué es la Energía?</h2>
+            <p>
+                La **energía** ($E$) es la capacidad de un cuerpo para realizar trabajo. Existen diferentes tipos de energía, como la energía cinética (asociada al movimiento) y la energía potencial (asociada a la posición).
+            </p>
+            <p>
+                La **energía cinética** ($E_c$) es la energía que posee un objeto debido a su movimiento. Su fórmula es:
+            </p>
+            <div class="formula">
+                $E_c = \frac{1}{2}mv^2$
+            </div>
+            <p>
+                Donde $E_c$ es la energía cinética (en Joules, J), $m$ es la masa del objeto (en kilogramos, kg) y $v$ es la velocidad del objeto (en metros por segundo, m/s).
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="section interactive-section">
+            <h2>Calculadora de Trabajo</h2>
+            <p>
+                Ingresa los valores para calcular el trabajo realizado.
+            </p>
+            <div class="input-group">
+                <label for="fuerza">Fuerza (N):</label>
+                <input type="number" id="fuerza" placeholder="Ej: 50" required>
+            </div>
+            <div class="input-group">
+                <label for="distancia">Distancia (m):</label>
+                <input type="number" id="distancia" placeholder="Ej: 10" required>
+            </div>
+            <button onclick="calcularTrabajo()">Calcular Trabajo</button>
+            <div id="resultado"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Elaborado por el Profesor Ángel Chacín Ávila, Licenciado en Física, Especialista en Ciencias Computacionales, UNES Núcleo Zulia</p>
+    </footer>
+
+    <script>
+        function calcularTrabajo() {
+            // Obtener los valores de los campos de entrada
+            const fuerza = parseFloat(document.getElementById('fuerza').value);
+            const distancia = parseFloat(document.getElementById('distancia').value);
+            const resultadoDiv = document.getElementById('resultado');
+
+            // Validar que los valores sean números
+            if (isNaN(fuerza) || isNaN(distancia)) {
+                resultadoDiv.textContent = 'Por favor, ingresa valores numéricos válidos.';
+                return;
+            }
+
+            // Calcular el trabajo
+            const trabajo = fuerza * distancia;
+
+            // Mostrar el resultado
+            resultadoDiv.textContent = `El trabajo realizado es: ${trabajo} J`;
+        }
+    </script>
+
+</body>
+</html>
